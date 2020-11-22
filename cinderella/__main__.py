@@ -40,8 +40,7 @@ the things I can help you with.
 *Main* commands available:
  💠 - /start: start the bot
  💠 - /help: PM's you this message.
- 💠 - /help <module name>: PM's you info about that module.
- 💠 - /source: Information about my source.
+ 💠 - /help <module name>: PM's you info about that module
  💠 - /settings:
    🔹 - in PM: will send you your settings for all supported modules.
    🔹 - in a group: will redirect you to pm, with all that chat's settings.
@@ -180,7 +179,7 @@ def send_start(bot, update):
     text = PM_START_TEXT
 
     keyboard = [[InlineKeyboardButton(text="🤝Help",callback_data="help_back"),InlineKeyboardButton(text="❣️Creator❣️",url="https://t.me/Danger_of_telegram")]]
-    keyboard += [[InlineKeyboardButton(text="🌐Connect Group", callback_data="main_connect"),InlineKeyboardButton(text=⚡️AddMe⚡️",url="t.me/{}?startgroup=true".format(bot.username))]]
+    keyboard += [[InlineKeyboardButton(text="🌐Connect Group", callback_data="main_connect"),InlineKeyboardButton(text=⚡️Add Me⚡️",url="t.me/{}?startgroup=true".format(bot.username))]]
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
                                          reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
 
